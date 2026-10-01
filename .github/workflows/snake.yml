@@ -1,0 +1,25 @@
+name: Grid Devourer
+on:
+  schedule:
+    - cron: "0 18 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: generate snake svg
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg?color_snake=%23008ba0&color_dots=%23e8f4f8,%23b3ddee,%2363c7e0,%2321a8c4,%2300e5ff
+            dist/github-contribution-grid-snake-dark.svg?color_snake=%2300e5ff&color_dots=%23122433,%231d3d55,%230f6a86,%2300b7d4,%237df3ff
+      - name: push to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
