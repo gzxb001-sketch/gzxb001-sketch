@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="278" viewBox="0 0 700 278" font-family="'Courier New',monospace">
+  <defs>
+    <filter id="tg" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="700" height="278" rx="14" fill="#081019"/>
+  <rect x="0" y="0" width="700" height="278" rx="14" fill="none" stroke="#1c3a52"/>
+  <path d="M 0 46 H 700" stroke="#1c3a52" fill="none"/>
+  <rect x="0" y="0" width="700" height="46" rx="14" fill="#0c1a2b"/>
+  <rect x="0" y="30" width="700" height="16" fill="#0c1a2b"/>
+
+  <circle cx="28" cy="23" r="6" fill="#ff2bd6"/>
+  <circle cx="52" cy="23" r="6" fill="#ffb454"/>
+  <circle cx="76" cy="23" r="6" fill="#00e5ff"/>
+  <text x="350" y="28" text-anchor="middle" font-size="13" fill="#5b87a6">operator@gzxb001-sketch : ~/profile</text>
+
+  <g font-size="15">
+    <text x="28" y="80"><tspan fill="#00e5ff">$ </tspan><tspan fill="#eaf6ff">whoami</tspan></text>
+    <text x="28" y="112"><tspan fill="#00e5ff">&gt; </tspan><tspan fill="#9be8ff">公子小白 · 前端系全栈学徒</tspan></text>
+
+    <text x="28" y="144"><tspan fill="#00e5ff">$ </tspan><tspan fill="#eaf6ff">current_mission --status</tspan></text>
+    <text x="28" y="176"><tspan fill="#00e5ff">&gt; </tspan><tspan fill="#9be8ff">竹墨词库 v0.9 · 词汇训练协议 </tspan><tspan fill="#ff2bd6">[ 构建中 ▓▓▓▓░ ]</tspan></text>
+
+    <text x="28" y="208"><tspan fill="#00e5ff">$ </tspan><tspan fill="#eaf6ff">cat interests.txt</tspan></text>
+    <text x="28" y="240"><tspan fill="#00e5ff">&gt; </tspan><tspan fill="#9be8ff">冰上艺术观测 ⛸ · 语言习得算法 · 造轮子</tspan></text>
+  </g>
+
+  <text x="28" y="264" font-size="15" fill="#00e5ff">$</text>
+  <rect x="46" y="252" width="10" height="16" fill="#00e5ff" filter="url(#tg)">
+    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;.5;.5;1" calcMode="discrete" dur="1.2s" repeatCount="indefinite"/>
+  </rect>
+</svg>
